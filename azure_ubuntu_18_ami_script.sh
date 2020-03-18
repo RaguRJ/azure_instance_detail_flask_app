@@ -9,6 +9,9 @@ apt-get install supervisor -y
 
 # Account to own server process
 useradd -m -d /home/pythonapp pythonapp
+groupadd supervisor
+usermod -a -G supervisor root
+usermod -a -G supervisor pythonapp
 
 # Fetch source code
 export HOME=/root
