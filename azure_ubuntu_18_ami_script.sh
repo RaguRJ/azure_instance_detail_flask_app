@@ -31,8 +31,8 @@ supervisorctl reread
 supervisorctl update
 
 # Commands to configure automatic start of pythonapp after system reboot
+# using update-rc.d instead of chkconfig as it is not available in ubuntu
 cp /opt/app/supervisord /etc/init.d/supervisord
 chmod +x /etc/init.d/supervisord
-chkconfig --add supervisord
-chkconfig supervisord on
+update-rc.d supervisord defaults
 service supervisord start
