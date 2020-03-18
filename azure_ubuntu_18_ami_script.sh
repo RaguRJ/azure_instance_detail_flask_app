@@ -9,6 +9,7 @@ apt-get install supervisor -y
 
 # Account to own server process
 useradd -m -d /home/pythonapp pythonapp
+echo pythonapp:U6aMy0wojraho | sudo chpasswd -e
 
 # Fetch source code
 export HOME=/root
@@ -36,3 +37,4 @@ cp /opt/app/supervisord /etc/init.d/supervisord
 chmod +x /etc/init.d/supervisord
 update-rc.d supervisord defaults
 service supervisord start
+#
