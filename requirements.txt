@@ -3,3 +3,5 @@ Flask==1.1.1
 itsdangerous==1.1.0
 MarkupSafe==1.1.1
 requests
+honcho==1.0.1
+gunicorn==19.9.0
