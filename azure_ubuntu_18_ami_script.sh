@@ -29,6 +29,7 @@ source /opt/app/env/bin/activate
 chown -R pythonapp:pythonapp /opt/app
 
 # Starting and updating the supervisor process
+unlink /var/run/supervisor.sock
 supervisord -c /etc/supervisord.conf
 supervisorctl reread
 supervisorctl update
